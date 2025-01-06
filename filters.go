@@ -16,9 +16,7 @@ THIS SOFTWARE.
 
 package resize
 
-import (
-	"math"
-)
+import "math"
 
 func nearest(in float64) float64 {
 	if in >= -0.5 && in < 0.5 {

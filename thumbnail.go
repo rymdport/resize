@@ -16,9 +16,7 @@ THIS SOFTWARE.
 
 package resize
 
-import (
-	"image"
-)
+import "image"
 
 // Thumbnail will downscale provided image to max width and height preserving
 // original aspect ratio and using the interpolation function interp.
