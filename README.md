@@ -1,28 +1,21 @@
-# This package is no longer being updated! Please look for alternatives if that bothers you.
+# Resize
 
-Resize
-======
+Image resizing for the [Go](http://go.dev) with common interpolation methods.
 
-Image resizing for the [Go programming language](http://golang.org) with common interpolation methods.
-
-[![Build Status](https://travis-ci.org/nfnt/resize.svg)](https://travis-ci.org/nfnt/resize)
-
-Installation
-------------
+## Installation
 
 ```bash
-$ go get github.com/nfnt/resize
+go get github.com/rymdport/resize
 ```
 
 It's that easy!
 
-Usage
------
+## Usage
 
-This package needs at least Go 1.1. Import package with
+This package needs at least Go 1.19. Import package with
 
 ```go
-import "github.com/nfnt/resize"
+import "github.com/rymdport/resize"
 ```
 
 The resize package provides 2 functions:
@@ -54,7 +47,7 @@ Sample usage:
 package main
 
 import (
-	"github.com/nfnt/resize"
+	"github.com/rymdport/resize"
 	"image/jpeg"
 	"log"
 	"os"
@@ -89,15 +82,13 @@ func main() {
 }
 ```
 
-Caveats
--------
+## Caveats
 
 * Optimized access routines are used for `image.RGBA`, `image.NRGBA`, `image.RGBA64`, `image.NRGBA64`, `image.YCbCr`, `image.Gray`, and `image.Gray16` types. All other image types are accessed in a generic way that will result in slow processing speed.
 * JPEG images are stored in `image.YCbCr`. This image format stores data in a way that will decrease processing speed. A resize may be up to 2 times slower than with `image.RGBA`. 
 
 
-Downsizing Samples
--------
+## Downsizing Samples
 
 Downsizing is not as simple as it might look like. Images have to be filtered before they are scaled down, otherwise aliasing might occur.
 Filtering is highly subjective: Applying too much will blur the whole image, too little will make aliasing become apparent.
@@ -144,8 +135,7 @@ Original image
 </table>
 
 
-License
--------
+## License
 
 Copyright (c) 2012 Jan Schlicht <janschlicht@gmail.com>
 Resize is released under a MIT style license.
