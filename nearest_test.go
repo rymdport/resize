@@ -19,7 +19,7 @@ package resize
 import "testing"
 
 func Test_FloatToUint8(t *testing.T) {
-	var testData = []struct {
+	testData := []struct {
 		in       float32
 		expected uint8
 	}{
@@ -38,7 +38,7 @@ func Test_FloatToUint8(t *testing.T) {
 }
 
 func Test_FloatToUint16(t *testing.T) {
-	var testData = []struct {
+	testData := []struct {
 		in       float32
 		expected uint16
 	}{

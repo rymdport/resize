@@ -21,7 +21,8 @@ THIS SOFTWARE.
 // utilized in the computations.
 //
 // Example:
-//     imgResized := resize.Resize(1000, 0, imgOld, resize.MitchellNetravali)
+//
+//	imgResized := resize.Resize(1000, 0, imgOld, resize.MitchellNetravali)
 package resize
 
 import (
@@ -586,7 +587,6 @@ func resizeNearest(width, height uint, scaleX, scaleY float64, img image.Image, 
 		wg.Wait()
 		return result
 	}
-
 }
 
 // Calculates scaling factors using old and new image dimensions.

@@ -5,7 +5,7 @@ import (
 )
 
 func Test_ClampUint8(t *testing.T) {
-	var testData = []struct {
+	testData := []struct {
 		in       int32
 		expected uint8
 	}{
@@ -24,7 +24,7 @@ func Test_ClampUint8(t *testing.T) {
 }
 
 func Test_ClampUint16(t *testing.T) {
-	var testData = []struct {
+	testData := []struct {
 		in       int64
 		expected uint16
 	}{
