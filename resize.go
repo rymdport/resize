@@ -80,6 +80,8 @@ var blur = 1.0
 // the aspect ratio is that of the originating image.
 // The resizing algorithm uses channels for parallel computation.
 // If the input image has width or height of 0, it is returned unchanged.
+//
+//gocyclo:ignore
 func Resize(width, height uint, img image.Image, interp InterpolationFunction) image.Image {
 	scaleX, scaleY := calcFactors(width, height, float64(img.Bounds().Dx()), float64(img.Bounds().Dy()))
 	if width == 0 {
