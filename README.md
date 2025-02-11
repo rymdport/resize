@@ -1,18 +1,19 @@
 # Resize
 
 Image resizing for the [Go](http://go.dev) with common interpolation methods.
+This fork aims to continue maintaining the project after it was archived upstream.
 
 ## Installation
+
+Import into your Go module with the following command:
 
 ```bash
 go get github.com/rymdport/resize
 ```
 
-It's that easy!
-
 ## Usage
 
-This package needs at least Go 1.19. Import package with
+This package needs at least Go 1.19. Import package with:
 
 ```go
 import "github.com/rymdport/resize"
@@ -88,14 +89,7 @@ func main() {
 * JPEG images are stored in `image.YCbCr`. This image format stores data in a way that will decrease processing speed. A resize may be up to 2 times slower than with `image.RGBA`. 
 
 
-## Downsizing Samples
-
-Downsizing is not as simple as it might look like. Images have to be filtered before they are scaled down, otherwise aliasing might occur.
-Filtering is highly subjective: Applying too much will blur the whole image, too little will make aliasing become apparent.
-Resize tries to provide sane defaults that should suffice in most cases.
-
-
 ## License
 
-Copyright (c) 2012 Jan Schlicht <janschlicht@gmail.com>
+Copyright (c) 2012 Jan Schlicht <janschlicht@gmail.com>.
 Resize is released under a MIT style license.
